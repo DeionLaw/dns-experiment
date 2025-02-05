@@ -5,8 +5,12 @@ In this tutorial, we experiment and explore DNS.<br />
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
-- PowerShell
--                       
+- PowerShell              
+
+<h2>Operating Systems Used </h2>
+
+- Windows 10 (21H2)
+- Windows Server
 
 <h2>Operating Systems Used </h2>
 
@@ -57,5 +61,67 @@ In this tutorial, we experiment and explore DNS.<br />
 </p>
 
 ---
+
+![Screenshot 2025-02-05 133334](https://github.com/user-attachments/assets/e57c695b-4039-47c6-94e2-6b7d9d63690a)
+
+
+<p>
+  Now that we know we can add informationt to our DNS logs manually, we can check to see first off that 'nslookup ThePentagon' reports back that it can not be found.
+</p>
+
+---
+
+![Screenshot 2025-02-05 134114](https://github.com/user-attachments/assets/28733e7e-f8b9-45ff-a6ac-9862474a874a)
+![Screenshot 2025-02-05 134240](https://github.com/user-attachments/assets/2f69b33d-128e-4f5a-8eb2-04d1f6d3f32d)
+
+
+<p>
+  Now, INSIDE THE DOMAIN CONTROLLER: We can open the 'DNS' app, which will open 'DNS Manager'. Inside, we will navigate the dropdowns to find DC-1 (or your device name) > Forward Lookup Zones > mydomain.com and in there we will right click and select 'New Host (A or AAAA)...). In the new pop up we will set the name to 'ThePentagon' and set the IP address to the domain controllers private IP address (10.0.0.4 for me, you can find this by typing ipconig into powershell.)
+</p>
+
+<p>
+  In the second screenshot, you can see 'ThePentagon' was added to this list inside the DNS server (we set the DNS server to our domain controller)
+</p>
+
+---
+
+![Screenshot 2025-02-05 134452](https://github.com/user-attachments/assets/0cf4a8db-3fe5-43c9-96c3-129288b5d863)
+
+<p>
+Now, INSIDE THE CLIENT MACHINE: We can see that pinging 'ThePentagon' now pings to a device under our control, congrats on the power you have achieved.
+</p>
+
+---
+![Screenshot 2025-02-05 134800](https://github.com/user-attachments/assets/e3675fa2-94b3-4795-90a2-df0d4a1a5686)
+
+
+<p>
+  Now, BACK INSIDE THE DOMAIN CONTROLLER: We will change the A record in the DNS Manager of 'ThePentagon' to ping to 8.8.8.8 (The primary DNS Server for Google).
+</p>
+
+---
+![Screenshot 2025-02-05 134914](https://github.com/user-attachments/assets/02576c8e-3f67-4ab1-969a-a26bf4d55d5a)
+
+
+<p>
+  Finally, BACK IN THE CLIENT MACHINE: We are going to ping 'ThePentagon' in PowerShell. You will notice that pinging 'ThePentagon' after changing the A record on the DNS server still ends up pinging the private IP address (no, this is not the same screenshot). Remember that the computer checks first the local DNS cache, THEN the host file, THEN finally it'll default out to checking with the DNS server.
+</p>
+
+---
+
+![Screenshot 2025-02-05 135450](https://github.com/user-attachments/assets/4fbe7daf-05d6-4ea5-ad19-bc85c8b3a838)
+
+
+<p>
+  So, still on the client machine, we are going to type 'ipconfig /flushdns' into powershell. This will clear the DNS cache that is on our machine. Now, we type 'ipconfig /displaydns' and you can see that everything has been cleared except the 'WhiteHouse' that I manually added to the host file.
+</p>
+
+---
+
+![Screenshot 2025-02-05 135658](https://github.com/user-attachments/assets/5b7db920-6f64-401d-8176-1c41d399009e)
+
+<p>
+  Now, you can see that 'ThePentagon' now pings to the '8.8.8.8' address because it has nothing in the cache or the host file for 'ThePentagon'.
+</p>
 
 
