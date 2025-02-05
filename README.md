@@ -1,22 +1,17 @@
-<p align="center">
-<img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
-</p>
-
-<h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
-In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
+<h1>Inspecting and Experimenting with DNS</h1>
+In this tutorial, we experiment and explore DNS.<br />
 
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
-- Various Command-Line Tools
-- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
-- Wireshark (Protocol Analyzer)
+- PowerShell
+-                       
 
 <h2>Operating Systems Used </h2>
 
 - Windows 10 (21H2)
-- Ubuntu Server 20.04
+- Windows Server
 
 <h2>Pre-Reqs</h2>
 - 2 machines on a local network, I will be using info and machines from (https://github.com/DeionLaw/configure-ad)
