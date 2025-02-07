@@ -19,11 +19,6 @@ In this tutorial, we experiment and explore DNS.<br />
 - Windows 10 (21H2)
 - Windows Server
 
-<h2>Operating Systems Used </h2>
-
-- Windows 10 (21H2)
-- Windows Server
-
 <h2>Pre-Reqs</h2>
 - 2 machines on a local network, I will be using info and VMs from (https://github.com/DeionLaw/configure-ad)
 
