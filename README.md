@@ -66,7 +66,7 @@ In this tutorial, we experiment and explore DNS.<br />
 
 
 <p>
-  Now that we know we can add informationt to our DNS logs manually, we can check to see first off that 'nslookup ThePentagon' reports back that it can not be found.
+  Now that we know we can add information to our DNS logs manually, we can check to see first off that 'nslookup ThePentagon' reports back that it can not be found.
 </p>
 
 ---
