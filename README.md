@@ -1,3 +1,7 @@
+<p align="center">
+![dns-logo](https://github.com/user-attachments/assets/8fbdb96e-a6bd-4349-9e68-3f37c74c594a)
+</p>
+
 <h1>Inspecting and Experimenting with DNS</h1>
 In this tutorial, we experiment and explore DNS.<br />
 
