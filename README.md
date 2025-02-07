@@ -121,7 +121,7 @@ Now, INSIDE THE CLIENT MACHINE: We can see that pinging 'ThePentagon' now pings 
 ![Screenshot 2025-02-05 135658](https://github.com/user-attachments/assets/5b7db920-6f64-401d-8176-1c41d399009e)
 
 <p>
-  Now, you can see that 'ThePentagon' now pings to the '8.8.8.8' address because it has nothing in the cache or the host file for 'ThePentagon'.
+  Now, you can see that 'ThePentagon' now pings to the '8.8.8.8' address because it has nothing in the cache or the host file for 'ThePentagon' and it defaulted to the DNS server, where we set 'ThePentagon' to the IP address of 8.8.8.8.
 </p>
 
 
