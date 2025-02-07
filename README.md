@@ -76,7 +76,7 @@ In this tutorial, we experiment and explore DNS.<br />
 
 
 <p>
-  Now, INSIDE THE DOMAIN CONTROLLER: We can open the 'DNS' app, which will open 'DNS Manager'. Inside, we will navigate the dropdowns to find DC-1 (or your device name) > Forward Lookup Zones > mydomain.com and in there we will right click and select 'New Host (A or AAAA)...). In the new pop up we will set the name to 'ThePentagon' and set the IP address to the domain controllers private IP address (10.0.0.4 for me, you can find this by typing ipconig into powershell.)
+  Now, INSIDE THE DOMAIN CONTROLLER: We can open the 'DNS' app, which will open 'DNS Manager'. Inside, we will navigate the dropdowns to find DC-1 (or your device name) > Forward Lookup Zones > mydomain.com and in there we will right click and select 'New Host (A or AAAA)...). In the new pop up we will set the name to 'ThePentagon' and set the IP address to the domain controllers private IP address (10.0.0.4 for me, you can find this by typing ipconfig into powershell.)
 </p>
 
 <p>
