@@ -18,7 +18,7 @@ In this tutorial, we experiment and explore DNS.<br />
 - Windows Server
 
 <h2>Pre-Reqs</h2>
-- 2 machines on a local network, I will be using info and machines from (https://github.com/DeionLaw/configure-ad)
+- 2 machines on a local network, I will be using info and VMs from (https://github.com/DeionLaw/configure-ad)
 
 <h2>Actions and Observations</h2>
 
